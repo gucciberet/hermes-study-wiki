@@ -19,6 +19,17 @@ const sidebars: SidebarsConfig = {
         'security',
       ],
     },
+    {
+      type: 'category',
+      label: '연동과 확장',
+      items: [
+        'providers-models',
+        'sessions',
+        'webhooks',
+        'plugins',
+        'mcp',
+      ],
+    },
   ],
 };
 
