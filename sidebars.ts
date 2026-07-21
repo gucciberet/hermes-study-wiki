@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
         'gateway',
         'scheduled-tasks',
         'security',
+        'troubleshooting',
       ],
     },
     {
@@ -24,10 +25,14 @@ const sidebars: SidebarsConfig = {
       label: '연동과 확장',
       items: [
         'providers-models',
+        'provider-routing',
         'sessions',
         'webhooks',
         'plugins',
         'mcp',
+        'api-server',
+        'acp-ide',
+        'dashboard-extension',
       ],
     },
   ],
