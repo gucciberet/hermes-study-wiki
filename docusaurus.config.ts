@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://hermes-study-wiki.vercel.app',
-  baseUrl: '/docs/',
+  baseUrl: '/',
 
   organizationName: 'gucciberet',
   projectName: 'hermes-study-wiki',
@@ -42,7 +42,7 @@ const config: Config = {
         hashed: true,
         language: ['en'],
         indexBlog: false,
-        docsRouteBasePath: '/',
+        docsRouteBasePath: 'docs',
         // Disabled: appends ?_highlight=... to URLs (before the #anchor),
         // which makes copy/pasted doc links ugly. Ctrl+F on the page is fine.
         highlightSearchTermsOnTargetPage: false,
@@ -56,12 +56,12 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        // Static-host redirect so the docs root leads cleanly into the
-        // single published page. Paths are relative to baseUrl (/docs/).
+        // Static-host redirect so the site root leads cleanly into the
+        // single published documentation page.
         redirects: [
           {
             from: '/',
-            to: '/getting-started/quickstart',
+            to: '/docs/getting-started/quickstart',
           },
         ],
       },
@@ -73,7 +73,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          routeBasePath: '/',  // Docs at the root of /docs/
+          routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/gucciberet/hermes-study-wiki/edit/main/',
         },
@@ -138,7 +138,7 @@ const config: Config = {
         {
           title: '문서',
           items: [
-            { label: '빠른 시작', to: '/getting-started/quickstart' },
+            { label: '빠른 시작', to: '/docs/getting-started/quickstart' },
           ],
         },
         {
