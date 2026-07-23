@@ -1,19 +1,15 @@
-# Hermes 쉬운 한글 위키
+# Hermes Agent 문서 (한국어)
 
-[Hermes Agent](https://hermes-agent.nousresearch.com/) 공식 문서의 핵심을 이해하기 쉽게 한국어로 정리한 공개 학습 위키입니다.
+[Hermes Agent](https://hermes-agent.nousresearch.com/) 공식 문서를 한국어로 번역한 공개 사이트입니다. 공식 문서 사이트의 UI/UX와 소스 구조를 그대로 따르며, 현재는 빠른 시작(Quickstart) 한 페이지를 게시합니다.
 
 - 공개 사이트: https://hermes-study-wiki.vercel.app
 - 공식 문서: https://hermes-agent.nousresearch.com/docs
 
-## 다루는 내용
+## 구조
 
-- 설치와 빠른 시작
-- 도구, 스킬, 메모리, 메시징
-- 설정과 업데이트
-- 프로필과 Gateway 운영
-- 예약 작업(cron)과 운영 보안
-
-문서는 공식 자료를 바탕으로 작성하며, 각 운영 문서에는 원문 링크와 확인일을 표시합니다.
+- 사이트는 [Docusaurus](https://docusaurus.io/)로 빌드됩니다.
+- 게시 페이지: `docs/getting-started/quickstart.md` → `/docs/getting-started/quickstart`
+- 번역 진행 상태는 `translation-state.json`에 기록됩니다(사이트에는 게시되지 않음).
 
 ## 개발
 

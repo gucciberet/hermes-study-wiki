@@ -1,0 +1,8 @@
+{
+  "label": "시작하기",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "몇 분 만에 Hermes Agent를 설치하고 실행해 보세요."
+  }
+}
