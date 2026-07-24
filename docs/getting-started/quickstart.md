@@ -16,7 +16,7 @@ description: "Hermes Agent와의 첫 대화 — 설치부터 5분 안에 채팅�
   <iframe
     style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
     src="https://www.youtube-nocookie.com/embed/R3YOGfTBcQg"
-    title="Hermes Agent Masterclass: Installation, Setup, Basic Commands"
+    title="Hermes Agent 마스터클래스: 설치, 설정, 기본 명령어"
     frameBorder="0"
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
@@ -72,7 +72,7 @@ iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 완료된 후, shell을 다시 로드하세요:
 
 ```bash
-source ~/.bashrc   # 또는 source ~/.zshrc
+source ~/.bashrc   # or source ~/.zshrc
 ```
 
 자세한 설치 옵션, 사전 요구 사항, 문제 해결은 [설치 가이드](./installation.md)를 참조하세요.
@@ -175,8 +175,8 @@ hermes config set OPENROUTER_API_KEY sk-or-...
 ## 3. 첫 채팅 실행
 
 ```bash
-hermes            # 클래식 CLI
-hermes --tui      # 최신 TUI (권장)
+hermes            # classic CLI
+hermes --tui      # modern TUI (recommended)
 ```
 
 모델, 사용 가능한 도구, skills가 표시된 환영 배너를 보게 됩니다. 구체적이고 검증하기 쉬운 prompt(프롬프트)를 사용하세요:
@@ -211,8 +211,8 @@ Help me set up a clean GitHub PR workflow for this codebase.
 넘어가기 전에, 재개(resume)가 동작하는지 확인하세요:
 
 ```bash
-hermes --continue    # 가장 최근 세션 재개
-hermes -c            # 짧은 형식
+hermes --continue    # Resume the most recent session
+hermes -c            # Short form
 ```
 
 방금 진행한 세션으로 돌아가야 합니다. 그렇지 않다면, 같은 profile에 있는지, 세션이 실제로 저장되었는지 확인하세요. 이는 나중에 여러 설정이나 여러 머신을 다룰 때 중요합니다.
@@ -254,7 +254,7 @@ hermes -c            # 짧은 형식
 ### 봇 또는 공유 어시스턴트
 
 ```bash
-hermes gateway setup    # 대화형 플랫폼 구성
+hermes gateway setup    # Interactive platform configuration
 ```
 
 [Telegram](/user-guide/messaging/telegram), [Discord](/user-guide/messaging/discord), [Slack](/user-guide/messaging/slack), [WhatsApp](/user-guide/messaging/whatsapp), [Signal](/user-guide/messaging/signal), [Email](/user-guide/messaging/email) 또는 [Home Assistant](/user-guide/messaging/homeassistant), 또는 [Microsoft Teams](/user-guide/messaging/teams)를 연결하세요.
@@ -270,18 +270,20 @@ hermes gateway setup    # 대화형 플랫폼 구성
 안전을 위해, 에이전트를 Docker 컨테이너나 원격 서버에서 실행하세요:
 
 ```bash
-hermes config set terminal.backend docker    # Docker 격리
-hermes config set terminal.backend ssh       # 원격 서버
+hermes config set terminal.backend docker    # Docker isolation
+hermes config set terminal.backend ssh       # Remote server
 ```
+
+Docker 샌드박스의 경우, 샌드박스가 실제 API 키를 절대 보지 않도록 **egress 자격 증명 주입 프록시**도 활성화할 수 있습니다. 로컬 TLS 가로채기 데몬 뒤에서만 작동하는 불투명 프록시 토큰만 보게 됩니다. [Egress 프록시](../user-guide/egress/iron-proxy.md)를 참조하세요. 설정은 `hermes egress setup && hermes egress start`이며, `hermes setup terminal`도 Docker 사용자에게 이를 안내합니다. Modal, SSH, Daytona, Singularity는 아직 연결되어 있지 않습니다.
 
 ### 음성 모드
 
 ```bash
-# Hermes 설치 디렉터리에서 실행합니다(curl 설치 프로그램은 이를 Linux/macOS에서는
-# ~/.hermes/hermes-agent에, Windows에서는 %LOCALAPPDATA%\hermes\hermes-agent에 배치합니다):
+# From the Hermes install directory (the curl installer placed it at
+# ~/.hermes/hermes-agent on Linux/macOS or %LOCALAPPDATA%\hermes\hermes-agent on Windows):
 cd ~/.hermes/hermes-agent
 uv pip install -e ".[voice]"
-# 무료 로컬 음성-텍스트 변환을 위한 faster-whisper 포함
+# Includes faster-whisper for free local speech-to-text
 ```
 
 그런 다음 CLI에서: `/voice on`. 녹음하려면 `Ctrl+B`를 누르세요. [음성 모드](../user-guide/features/voice-mode.md)를 참조하세요.
@@ -295,9 +297,9 @@ Hermes에는 이미 `~/.hermes/skills/`에 설치된 번들 skills 카탈로그�
 **허브에서 탐색 및 설치:**
 
 ```bash
-hermes skills browse                      # 사용 가능한 모든 것 나열
-hermes skills search kubernetes           # 키워드로 skills 찾기
-hermes skills install openai/skills/k8s   # 하나 설치(먼저 보안 스캔 실행)
+hermes skills browse                      # list everything available
+hermes skills search kubernetes           # find skills by keyword
+hermes skills install openai/skills/k8s   # install one (runs a security scan first)
 ```
 
 install 인자는 허브의 `source/path` 슬러그입니다 — `openai/skills/k8s`는 OpenAI 카탈로그의 `k8s` skill을 의미합니다. `hermes skills browse`는 사용할 정확한 슬러그를 보여줍니다.
@@ -305,8 +307,8 @@ install 인자는 허브의 `source/path` 슬러그입니다 — `openai/skills/
 **skill 사용** — 설치된 모든 skill은 자동으로 슬래시 명령어가 됩니다:
 
 ```bash
-/k8s deploy the staging manifest          # 요청과 함께 skill 실행
-/k8s                                       # 로드한 뒤 Hermes가 무엇이 필요한지 묻게 함
+/k8s deploy the staging manifest          # run the skill with a request
+/k8s                                       # load it and let Hermes ask what you need
 ```
 
 이는 CLI와 연결된 모든 메시징 플랫폼에서 동작합니다. 모든 것을 미리 설치할 필요는 없습니다 — 에이전트는 일반 대화 중 작업이 일치할 때 알맞은 번들 skill을 스스로 선택합니다.
@@ -316,7 +318,7 @@ install 인자는 허브의 `source/path` 슬러그입니다 — `openai/skills/
 ### MCP 서버
 
 ```yaml
-# ~/.hermes/config.yaml에 추가
+# Add to ~/.hermes/config.yaml
 mcp_servers:
   github:
     command: npx
