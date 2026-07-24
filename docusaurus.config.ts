@@ -75,7 +75,6 @@ const config: Config = {
         docs: {
           routeBasePath: 'docs',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/gucciberet/hermes-study-wiki/edit/main/',
         },
         blog: false,
         theme: {
@@ -110,55 +109,7 @@ const config: Config = {
           position: 'left',
           label: '문서',
         },
-        {
-          href: 'https://hermes-agent.nousresearch.com/',
-          label: '다운로드',
-          position: 'left',
-        },
-        {
-          href: 'https://hermes-agent.nousresearch.com',
-          label: '홈',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/NousResearch/hermes-agent',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          href: 'https://discord.gg/NousResearch',
-          label: 'Discord',
-          position: 'right',
-        },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: '문서',
-          items: [
-            { label: '빠른 시작', to: '/docs/getting-started/quickstart' },
-          ],
-        },
-        {
-          title: '커뮤니티',
-          items: [
-            { label: 'Discord', href: 'https://discord.gg/NousResearch' },
-            { label: 'GitHub Issues', href: 'https://github.com/NousResearch/hermes-agent/issues' },
-            { label: 'Skills Hub', href: 'https://agentskills.io' },
-          ],
-        },
-        {
-          title: '더 보기',
-          items: [
-            { label: '데스크톱 다운로드', href: 'https://hermes-agent.nousresearch.com/' },
-            { label: 'GitHub', href: 'https://github.com/NousResearch/hermes-agent' },
-            { label: 'Nous Research', href: 'https://nousresearch.com' },
-          ],
-        },
-      ],
-      copyright: `Built by <a href="https://nousresearch.com">Nous Research</a> · MIT License · ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
