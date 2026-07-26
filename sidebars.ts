@@ -6,7 +6,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '시작하기',
       collapsed: true,
-      items: ['getting-started/quickstart', 'getting-started/installation'],
+      items: ['getting-started/quickstart', 'getting-started/installation', 'getting-started/platform-support'],
     },
   ],
 };
