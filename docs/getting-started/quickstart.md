@@ -143,6 +143,7 @@ Blank Slate는 명시적인 `platform_toolsets.cli` 목록과 `agent.disabled_to
 | **NVIDIA NIM** | build.nvidia.com 또는 로컬 NIM을 통한 Nemotron 모델 | `NVIDIA_API_KEY` 설정(선택: `NVIDIA_BASE_URL`) |
 | **GitHub Copilot** | GitHub Copilot 구독(GPT-5.x, Claude, Gemini 등) | `hermes model`을 통한 OAuth, 또는 `COPILOT_GITHUB_TOKEN` / `GH_TOKEN` |
 | **GitHub Copilot ACP** | Copilot ACP 에이전트 백엔드(로컬 `copilot` CLI 실행) | `hermes model`(`copilot` CLI + `copilot login` 필요) |
+| **Vercel AI Gateway** | Vercel AI Gateway 라우팅 | `AI_GATEWAY_API_KEY` 설정 |
 | **Custom Endpoint** | VLLM, SGLang, Ollama 또는 모든 OpenAI 호환 API | base URL + API 키 설정 |
 
 대부분의 처음 사용자에게: provider를 선택하고, 변경해야 하는 이유를 알지 못한다면 기본값을 그대로 받아들이세요. 환경 변수와 설정 단계가 포함된 전체 provider 카탈로그는 [Providers](../integrations/providers.md) 페이지에 있습니다.
