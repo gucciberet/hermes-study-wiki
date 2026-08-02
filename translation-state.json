@@ -1,7 +1,7 @@
 {
   "$comment": "Machine-readable translation progress tracker. Not part of the published site (lives at repo root, outside docs/, src/pages/, and static/).",
   "upstream_repo": "https://github.com/NousResearch/hermes-agent",
-  "upstream_commit": "cc0af6b9e8b4682ac54d67d115198f6b12343784",
+  "upstream_commit": "1c39f1c9f984705e7b5be66f826ebecb9d381629",
   "translations": [
     {
       "source_path": "website/docs/getting-started/quickstart.md",
@@ -33,7 +33,7 @@
     },
     {
       "source_path": "website/docs/getting-started/nix-setup.md",
-      "source_blob_sha": "17d34883c9e6634249831dda18adb90041158c95",
+      "source_blob_sha": "2919d14acfb86e2225f0740f3125950aa04d32fc",
       "local_path": "docs/getting-started/nix-setup.md",
       "locale": "ko",
       "status": "translated"
