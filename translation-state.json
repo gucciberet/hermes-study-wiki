@@ -1,7 +1,7 @@
 {
   "$comment": "Machine-readable translation progress tracker. Not part of the published site (lives at repo root, outside docs/, src/pages/, and static/).",
   "upstream_repo": "https://github.com/NousResearch/hermes-agent",
-  "upstream_commit": "1c39f1c9f984705e7b5be66f826ebecb9d381629",
+  "upstream_commit": "a991dfc25daf68994c21d6adcdfbafb1b3dc23cf",
   "translations": [
     {
       "source_path": "website/docs/getting-started/quickstart.md",
@@ -51,7 +51,14 @@
       "local_path": "docs/getting-started/learning-path.md",
       "locale": "ko",
       "status": "translated"
+    },
+    {
+      "source_path": "website/docs/user-guide/cli.md",
+      "source_blob_sha": "a6b9356c453b2a35ac3efb334739665c5651f7d9",
+      "local_path": "docs/user-guide/cli.md",
+      "locale": "ko",
+      "status": "translated"
     }
   ],
-  "next_target": "website/docs/user-guide/cli.md"
+  "next_target": "website/docs/user-guide/tui.md"
 }

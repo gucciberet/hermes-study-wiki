@@ -16,6 +16,14 @@ const sidebars: SidebarsConfig = {
         'getting-started/learning-path',
       ],
     },
+    {
+      type: 'category',
+      label: 'Hermes 사용하기',
+      collapsed: true,
+      items: [
+        'user-guide/cli',
+      ],
+    },
   ],
 };
 
