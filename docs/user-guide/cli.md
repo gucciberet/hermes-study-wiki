@@ -96,7 +96,7 @@ hermes -w -z "Fix issue #123"     # Single query in worktree
 
 이전 세션(`hermes -c` 또는 `hermes --resume <id>`)을 재개하면 배너와 입력 프롬프트 사이에 "이전 대화" 패널이 나타나 대화 기록의 간략한 요약을 보여줍니다. 자세한 내용과 구성은 [세션 - 이력서에 대한 대화 요약](sessions.md#conversation-recap-on-resume)을 참조하세요.
 
-## 키바인딩
+## 키바인딩 {#keybindings}
 
 | 열쇠 | 액션 |
 |------|---------|

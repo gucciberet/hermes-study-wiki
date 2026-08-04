@@ -22,6 +22,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'user-guide/cli',
+        'user-guide/tui',
       ],
     },
   ],
