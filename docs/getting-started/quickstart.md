@@ -119,6 +119,7 @@ Blank Slate는 명시적인 `platform_toolsets.cli` 목록과 `agent.disabled_to
 | **Kimi / Moonshot China** | 중국 지역 Moonshot endpoint | `KIMI_CN_API_KEY` 설정 |
 | **Arcee AI** | Trinity 모델 | `ARCEEAI_API_KEY` 설정 |
 | **GMI Cloud** | 다중 모델 직접 API | `GMI_API_KEY` 설정 |
+| **Actual Computer** | 프라이빗 추론 클러스터로 사용하는 자체 하드웨어 — 호스팅 릴레이 또는 로컬 데몬 | `ACTUAL_API_KEY` 설정(릴레이) 또는 `ACTUAL_BASE_URL=http://127.0.0.1:8080`(로컬, 키 없음) |
 | **MiniMax (OAuth)** | 브라우저 OAuth를 통한 MiniMax 프런티어 모델 — API 키 불필요(`hermes_cli/models.py`의 모델 이름은 릴리스마다 변경될 수 있음) | `hermes model` → MiniMax (OAuth) |
 | **MiniMax** | 국제 MiniMax endpoint | `MINIMAX_API_KEY` 설정 |
 | **MiniMax China** | 중국 지역 MiniMax endpoint | `MINIMAX_CN_API_KEY` 설정 |
@@ -392,3 +393,4 @@ hermes acp
 - **[AI Providers](../integrations/providers.md)** — 전체 provider 목록과 설정 세부 정보
 - **[Skills 시스템](../user-guide/features/skills.md)** — 재사용 가능한 워크플로와 지식
 - **[팁 및 모범 사례](../guides/tips.md)** — 파워 유저 팁
+- **[다른 머신으로 이동](/reference/faq#exporting-hermes-to-another-machine)** — `hermes backup`은 전체 환경을 마이그레이션합니다(또는 [단일 profile](/reference/faq#moving-a-single-profile-to-another-machine)을 마이그레이션합니다). 처음부터 다시 구축할 필요가 없습니다.
