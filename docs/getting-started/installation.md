@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: "설치"
-description: "Linux, macOS, WSL2, 네이티브 Windows 또는 Termux를 통한 Android에 Hermes Agent를 설치합니다"
+description: "Linux, macOS, WSL2, 네이티브 Windows 또는 Termux를 통한 Android에 Hermes Agent 설치"
 ---
 
 # 설치
 
-2분 안에 Hermes Agent를 설치하고 실행해 보세요!
+2분 안에 Hermes Agent를 설치하고 실행하세요!
 
 :::tip 플랫폼 지원
 전체 플랫폼 지원 매트릭스(지원되는 OS, 배포 방식 및 플랫폼별 제한 기능)는
@@ -15,10 +15,10 @@ description: "Linux, macOS, WSL2, 네이티브 Windows 또는 Termux를 통한 A
 
 ## 빠른 설치
 ### macOS 또는 Windows에서 Hermes Desktop 설치 프로그램 사용 (권장)
-명령줄 및 데스크톱 애플리케이션을 손쉽게 설치하려면, 저희 웹사이트에서 [Hermes Desktop 설치 프로그램을 다운로드](https://hermes-agent.nousresearch.com/)하여 실행하세요.
+명령줄 및 데스크톱 애플리케이션을 쉽게 설치하려면, 웹사이트에서 [Hermes Desktop 설치 프로그램을 다운로드](https://hermes-agent.nousresearch.com/)하여 실행하세요.
 
 ### Hermes Desktop 없이:
-Hermes Desktop 없이 명령줄만 설치하려면, 다음을 실행하세요:
+Hermes Desktop 없이 명령줄만 설치하려면 다음을 실행하세요:
 
 #### Linux / macOS / WSL2 / Android (Termux)
 ```bash
@@ -27,7 +27,7 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 
 #### Windows (native)
 
-powershell에서 실행:
+powershell에서 실행하세요:
 ```powershell
 iex (irm https://hermes-agent.nousresearch.com/install.ps1) 
 ```
@@ -39,7 +39,7 @@ hermes desktop
 
 ### 설치 프로그램의 작업
 
-설치 프로그램은 모든 것을 자동으로 처리합니다 — 모든 종속성(Python, Node.js, ripgrep, ffmpeg), 저장소 클론, 가상 환경, 전역 `hermes` 명령 설정, LLM provider 구성까지 처리합니다. 완료되면 바로 채팅할 수 있습니다.
+설치 프로그램은 모든 것을 자동으로 처리합니다 — 모든 종속성(Python, Node.js, ripgrep, ffmpeg), 저장소 클론, 가상 환경, 전역 `hermes` 명령 설정 및 LLM provider 구성까지 처리합니다. 완료되면 바로 채팅할 수 있습니다.
 
 #### 설치 레이아웃
 
@@ -73,7 +73,7 @@ hermes setup          # Or run the full setup wizard to configure everything at 
 ```
 
 :::tip 가장 빠른 경로: Nous Portal
-하나의 구독으로 300개 이상의 모델과 [Tool Gateway](/user-guide/features/tool-gateway)(웹 검색, 이미지 생성, TTS, 클라우드 브라우저)를 모두 사용할 수 있습니다. 도구별 키를 번거롭게 관리하지 마세요:
+하나의 구독으로 [Tool Gateway](/user-guide/features/tool-gateway)(웹 검색, 이미지 생성, TTS, 클라우드 브라우저)를 포함한 300개 이상의 모델을 사용할 수 있습니다. 도구별 키를 관리하는 번거로움을 건너뛰세요:
 
 ```bash
 hermes setup --portal
@@ -86,7 +86,7 @@ hermes setup --portal
 
 ## 사전 요구 사항
 
-**설치 프로그램:** Windows 이외의 플랫폼에서는 **Git**만 있으면 됩니다. Linux에서는 `curl`과 `xz-utils`도 사용할 수 있는지 확인하세요(설치 프로그램이 Node.js를 `.tar.xz` 아카이브로 다운로드합니다). 데스크톱 앱은 네이티브 모듈을 컴파일하기 위해 추가로 `g++`(또는 Debian/Ubuntu의 `build-essential`)가 필요합니다. 그 외의 모든 사항은 설치 프로그램이 자동으로 처리합니다:
+**설치 프로그램:** Windows 이외의 플랫폼에서는 유일한 사전 요구 사항이 **Git**입니다. Linux에서는 `curl`과 `xz-utils`도 사용할 수 있는지 확인하세요(설치 프로그램이 Node.js를 `.tar.xz` 아카이브로 다운로드합니다). 데스크톱 앱은 네이티브 모듈을 컴파일하기 위해 추가로 `g++`(또는 Debian/Ubuntu의 `build-essential`)가 필요합니다. 설치 프로그램은 그 외의 모든 것을 자동으로 처리합니다:
 
 - **uv** (빠른 Python 패키지 관리자)
 - **Python 3.11** (uv를 통해, sudo 불필요)
@@ -106,23 +106,23 @@ Nix는 더 이상 **명시적으로 지원되는 설치 경로가 아닙니다**
 
 ## 수동 / 개발자 설치
 
-저장소를 클론하고 소스에서 설치하려는 경우 — 기여, 특정 브랜치에서 실행 또는 가상 환경을 완전히 제어하기 위해 — 기여 가이드의 [개발 환경 설정](../developer-guide/contributing.md#development-setup) 섹션을 참조하세요.
+기여, 특정 브랜치에서 실행 또는 가상 환경을 완전히 제어하기 위해 저장소를 클론하고 소스에서 설치하려는 경우, 기여 가이드의 [개발 환경 설정](../developer-guide/contributing.md#development-setup) 섹션을 참조하세요.
 
 ---
 
 ## sudo 없이 / 시스템 서비스 사용자 설치
 
-전용의 권한 없는 사용자(예: `hermes` systemd 서비스 계정 또는 `sudo` 액세스가 없는 모든 사용자)로 Hermes를 실행하는 것이 지원됩니다. 설치 경로에서 실제로 root가 필요한 유일한 부분은 Chromium이 사용하는 공유 라이브러리(`libnss3`, `libxkbcommon` 등)를 `apt`로 설치하는 Playwright의 `--with-deps` 단계입니다. 설치 프로그램은 sudo 사용 가능 여부를 감지하고 sudo가 없을 때 원활하게 기능을 낮춥니다 — 서비스 사용자 자신의 Playwright 캐시에 Chromium 바이너리를 설치하고 관리자가 별도로 실행해야 하는 정확한 명령을 출력합니다.
+전용의 권한 없는 사용자(예: `hermes` systemd 서비스 계정 또는 `sudo` 액세스가 없는 모든 사용자)로 Hermes를 실행할 수 있습니다. 설치 경로에서 실제로 root가 필요한 유일한 부분은 Chromium이 사용하는 공유 라이브러리(`libnss3`, `libxkbcommon` 등)를 `apt`로 설치하는 Playwright의 `--with-deps` 단계입니다. 설치 프로그램은 sudo 사용 가능 여부를 감지하고 sudo가 없을 때 원활하게 성능을 낮춥니다 — 서비스 사용자 자신의 Playwright 캐시에 Chromium 바이너리를 설치하고 관리자가 별도로 실행해야 하는 정확한 명령을 출력합니다.
 
 **권장 분리(Debian/Ubuntu):**
 
-1. **한 번만, sudo 권한이 있는 관리자 사용자로**, Chromium에 필요한 시스템 라이브러리를 설치합니다:
+1. **한 번만, sudo 권한이 있는 관리자 사용자로**, Chromium에 필요한 시스템 라이브러리를 설치하세요:
    ```bash
    sudo npx playwright install-deps chromium
    ```
-   (어디서든 실행할 수 있습니다 — `npx`가 필요에 따라 Playwright를 가져옵니다.)
+   (어디서든 실행할 수 있습니다 — `npx`가 필요할 때 Playwright를 가져옵니다.)
 
-2. **권한 없는 서비스 사용자로**, 일반 설치 프로그램을 실행합니다. 누락된 sudo를 감지하고 `--with-deps`를 건너뛰며 Chromium을 사용자의 로컬 Playwright 캐시에 설치합니다:
+2. **권한 없는 서비스 사용자로**, 일반 설치 프로그램을 실행하세요. 누락된 sudo를 감지하고 `--with-deps`를 건너뛰며 Chromium을 사용자의 로컬 Playwright 캐시에 설치합니다:
    ```bash
    curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
    ```
@@ -132,7 +132,7 @@ Nix는 더 이상 **명시적으로 지원되는 설치 경로가 아닙니다**
    curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- --skip-browser
    ```
 
-3. **서비스 사용자의 shell에서 `hermes`를 사용할 수 있도록 합니다.** 설치 프로그램은 `~/.local/bin/hermes`에 런처를 작성합니다. 시스템 서비스 계정에는 `~/.local/bin`이 포함되지 않은 최소 PATH가 있는 경우가 많습니다. 이를 사용자의 환경에 추가하거나, 런처를 시스템 위치에 심볼릭 링크하세요:
+3. **서비스 사용자의 shell에서 `hermes`를 사용할 수 있도록 하세요.** 설치 프로그램은 `~/.local/bin/hermes`에 런처를 작성합니다. 시스템 서비스 계정에는 `~/.local/bin`이 포함되지 않은 최소 PATH가 있는 경우가 많습니다. 이를 사용자의 환경에 추가하거나, 런처를 시스템 위치에 심볼릭 링크하세요:
    ```bash
    # Option A — add to the service user's profile
    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
@@ -142,6 +142,14 @@ Nix는 더 이상 **명시적으로 지원되는 설치 경로가 아닙니다**
    ```
 
 4. **확인:** 이제 `hermes doctor`가 문제없이 실행되어야 합니다. `ModuleNotFoundError: No module named 'dotenv'`가 발생하면, venv 런처(`~/.hermes/hermes-agent/venv/bin/hermes`) 대신 시스템 Python으로 저장소 소스 `hermes` 파일(`~/.hermes/hermes-agent/hermes`)을 호출하고 있는 것입니다 — 3단계를 수정하세요.
+
+5. **이 계정에서 메시징 gateway도 실행하나요?** 서비스 사용자의 사용자 수준 서비스는 lingering을 활성화하기 전까지 로그아웃 시 중지되고 부팅 시 시작되지 않습니다:
+
+   ```bash
+   sudo loginctl enable-linger <service-user>
+   ```
+
+   서비스 설정 자체는 [Messaging Gateway](/user-guide/messaging/)를 참조하세요.
 
 같은 패턴이 Arch(설치 프로그램은 동일한 sudo 감지 로직으로 pacman을 사용), Fedora/RHEL 및 openSUSE에서도 동작합니다 — 이 배포판들은 `--with-deps`를 전혀 지원하지 않으므로 관리자가 항상 시스템 라이브러리를 별도로 설치합니다. 설치 프로그램이 관련 `dnf`/`zypper` 명령을 출력합니다.
 
