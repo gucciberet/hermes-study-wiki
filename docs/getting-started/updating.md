@@ -80,7 +80,11 @@ updates:
   pre_update_backup: full
 ```
 
-`updates.pre_update_backup`는 `quick`(기본값 - 위에 설명된 경량 상태 스냅샷), `full`(빠른 스냅샷과 완전한 `HERMES_HOME` zip 기능이 추가되어 대규모 주택에서는 시간을 추가할 수 있음), `off`(사전 업데이트 백업이 전혀 없음 - `--no-backup`는 단일 실행에 대해 동일함)의 세 가지 모드가 있는 단일 손잡이입니다. 레거시 부울 값은 계속 작동합니다. `true`는 `full`를 의미하고 `false`는 `off`를 의미합니다.
+`updates.pre_update_backup`는 `quick`(기본값 — 위에서 설명한 경량 상태 스냅샷), `full`(빠른 스냅샷과 전체 `HERMES_HOME` zip, 대용량 홈에서는 몇 분이 더 걸릴 수 있음), `off`(업데이트 전 백업 없음 — `--no-backup`도 단일 실행에서 동일함)의 세 가지 모드가 있는 단일 설정입니다. 이전 불리언 값도 계속 작동합니다. `true`는 `full`을, `false`는 `off`를 의미합니다.
+
+:::tip 새 컴퓨터로 옮기시나요?
+업데이트 백업은 현재 위치에서의 업데이트를 보호합니다. 전체 설정을 다른 하드웨어로 이전하는 경우에는 대신 `hermes backup` + `hermes import`를 사용하세요. [Hermes를 다른 컴퓨터로 내보내기](/reference/faq#exporting-hermes-to-another-machine) 및 [`hermes backup`과 `hermes profile export`](/reference/faq#hermes-backup-vs-hermes-profile-export)를 참조하세요.
+:::
 
 ### Windows: 다른 `hermes.exe`가 실행 중입니다.
 
