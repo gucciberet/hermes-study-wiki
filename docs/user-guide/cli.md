@@ -42,6 +42,8 @@ hermes chat -s github-pr-workflow -q "open a draft PR"
 # Resume previous sessions
 hermes --continue             # Resume the most recent CLI session (-c)
 hermes --resume <session_id>  # Resume a specific session by ID (-r)
+hermes --resume latest        # Resume the most recent session (same as -c)
+hermes --resume latest --in ./dir  # Resume ./dir's latest session, staying in ./dir
 
 # Verbose mode (debug output)
 hermes chat --verbose
@@ -50,6 +52,25 @@ hermes chat --verbose
 hermes -w                         # Interactive mode in worktree
 hermes -w -z "Fix issue #123"     # Single query in worktree
 ```
+
+### 플러그인 관리
+
+`hermes plugins` 명령은 동일한 옵트인 워크플로를 통해 기본 Hermes 플러그인과
+휴대용 Agent Plugins v1 패키지를 관리합니다:
+
+```bash
+hermes plugins install owner/repository --no-enable
+hermes plugins list
+hermes plugins enable <plugin-name>
+hermes plugins disable <plugin-name>
+hermes plugins update <plugin-name>
+hermes plugins remove <plugin-name>
+```
+
+휴대용 패키지는 명시적으로 활성화할 때까지 비활성 상태로 유지됩니다. Hermes는 현재
+휴대용 Agent Skills와 stdio MCP 항목을 로드합니다. 정확히 지원되는 하위 집합과 신뢰 경계는
+[플러그인 개발자 가이드](/developer-guide/plugins#portable-agent-plugins-v1-packages)를
+참조하세요.
 
 ## 인터페이스 레이아웃
 
@@ -372,6 +393,8 @@ hermes -c                                  # Short form
 hermes -c "my project"                     # Resume a named session (latest in lineage)
 hermes --resume 20260225_143052_a1b2c3     # Resume a specific session by ID
 hermes --resume "refactoring auth"         # Resume by title
+hermes --resume latest                     # Resume the most recent session (same as -c)
+hermes --resume latest --in ./my-project   # Latest session for ./my-project's workspace
 hermes -r 20260225_143052_a1b2c3           # Short form
 ```
 
